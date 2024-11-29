@@ -1,0 +1,222 @@
+/* Global Box Sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Full-width Swiper Container */
+ .swiper-container {
+    /* background-color: #1a1a1a; */
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+  .dark-mode .swiper-container {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+
+/* Main Title Styling */
+.slider-main-title {
+    font-size: 20px;
+    color: #dd0c0c;
+    padding: 0px 0px 40px;
+    margin-top: -10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+
+
+/* Slide Content Styling */
+.slide-content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 130px;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+    background-color: #222; /* Darker background */
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect: Slight scale and shadow */
+.slide-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image inside the slide */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background: rgba(34, 34, 34, 0.7); /* Darker overlay */
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect on Text Overlay */
+.slide-content:hover .text-overlay {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+/* Tag Styling on Each Slide */
+.slide-tag {
+    background-color: #ff4081; /* Futuristic neon pink */
+    color: #ffffff;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 20px; /* Round corners for the tag */
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Slide Title */
+.slide-title {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+/* Slide Button Styling */
+.slide-button {
+    background: none;
+    border: 2px solid #00aaff; /* Neon blue border */
+    color: #00aaff;
+    font-size: 12px;
+    margin-top: 8px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slide-button:hover {
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+/* Navigation Arrows Styling */
+.swiper-button-next,
+.swiper-button-prev {
+    background: none;
+    color: #00aaff; /* Neon blue */
+    font-size: 16px;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+/* Centering Swiper Slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slide-content {
+        max-width: 380px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-container {
+        padding: 20px 10px;
+    }
+
+    .slide-content {
+        max-width: 400px;
+        height: 130px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-container {
+        padding: 5px;
+        margin-top: 50px;
+    }
+
+    .slide-content {
+        width: 300px;
+        height: 100px;
+    }
+
+    .slide-title {
+        font-size: 10px;
+    }
+
+    .swiper-slide {
+        margin-right: 0;
+    }
+
+
+    .dark-mode  .slider-main-title{
+        margin-top: -90px;
+    }
+}
+

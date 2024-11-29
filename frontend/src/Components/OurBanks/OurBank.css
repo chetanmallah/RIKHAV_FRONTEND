@@ -1,0 +1,104 @@
+/* Outer slider container */
+.bank-slider-container {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #1a1a1a; 
+}
+
+.light-mode .bank-slider-container {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #fff; 
+}
+
+/* Title Styling */
+.bank-slider-title {
+    font-size: 2em;
+    color: #d32f2f;  /* Aesthetic Red color */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Underline for the title */
+.bank-slider-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #d32f2f;
+}
+
+/* 0uter slider container */
+.bank-slider {
+    width: 100%;
+    height: 30%;
+    overflow: hidden;  /* Prevent overlapping of components */
+    /* background-color: #121212; */
+    padding: 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bank-slider-track {
+    display: flex;
+    animation: scroll 20s linear infinite; 
+    width: max-content;
+}
+
+/* Individual slide styling */
+.bank-slide {
+    width: 250px; 
+    height: 150px; 
+    margin: 0 10px;
+    /* background: #1110108b;  */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* box-shadow: 0px 4px 15px rgba(14, 14, 14, 0.4);  */
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect on slide */
+.bank-slide:hover {
+    transform: scale(1.2);
+}
+
+/* Image inside the slide */
+.bank-bank-logo {
+    width: 190px;  /* Adjust image size */
+    height: 100px; /* Adjust height */
+    border-radius: 8px;
+    margin-bottom: 10px; 
+}
+
+/* Bank name text styling */
+.bank-bank-name {
+    color: #0d0d0d;
+    font-size: 1.2em; 
+    font-weight: 500;
+    margin-top: 5px;  
+}
+
+/* Keyframe animation for smooth scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}

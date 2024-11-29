@@ -1,0 +1,177 @@
+/* Section and Title Styling */
+.feature-card-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-card-main-title {
+    font-size: 1.5rem;
+    color: #e54b4b;
+    margin-bottom: 0.5rem;
+}
+
+.feature-subtitle {
+    font-size: 1rem;
+    color: #ea3737;
+    margin-bottom: 2rem;
+}
+
+/* Sliding Toggle Button */
+.feature-toggle-slider {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background: #e9e9e9;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: #e54b4b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.4s ease;
+}
+
+.trader {
+    left: 0;
+}
+
+.investor {
+    left: 50%;
+}
+
+/* Cards Layout */
+.feature-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Card Styling */
+.feature-card {
+    background: #0d0d0d;
+    border: 1px solid #64a767;
+    border-radius: 8px;
+    width: 220px;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(150, 151, 231, 0.743);
+    transition: box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0px 8px 16px rgba(20, 214, 68, 0.797);
+}
+
+.feature-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.feature-card-content {
+    text-align: center;
+}
+
+.feature-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e9ce84;
+    margin: 0.5rem 0;
+}
+
+.feature-card-description {
+    font-size: 0.85rem;
+    color: #b4dc79;
+}
+
+/* Light Mode Overrides */
+.light-mode .feature-card {
+    background: #ebe2eb;
+}
+
+.light-mode .feature-card-title {
+    color: #1f0707;
+}
+
+.light-mode .feature-card-description {
+    color: #1a1818;
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .feature-card-container {
+        grid-template-columns: 1fr; /* One card per row */
+        gap: 2rem;
+       
+       
+    }
+
+    .feature-card-section{
+        margin-top: 700px;
+    }
+
+    .feature-card {
+        width: 80%;
+        height: 250px;
+    }
+
+    .light-mode .feature-subtitle{
+        color: #1a1818;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .feature-card-title {
+        font-size: 1 rem;
+
+
+    }
+
+    .feature-card-description {
+        font-size: 0.9rem;
+        font-family:  sans-serif;
+        margin-top: 20px;
+    }
+}
+
+/* Tablet and iPad Devices (min-width: 481px and max-width: 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .feature-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+}
+
+/* Desktop Devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .feature-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem; /* Reduced gap for closer spacing */
+    }
+
+    .feature-card {
+        width: 220px; /* Maintained original width */
+    }
+}

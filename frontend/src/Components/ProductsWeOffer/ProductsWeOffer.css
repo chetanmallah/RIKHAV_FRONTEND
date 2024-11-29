@@ -1,0 +1,230 @@
+/* General styling for the section */
+
+/* Base Styles */
+.products-we-offer-section {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title and Subtitle Styles */
+.products-we-offer-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e53946;
+  margin-bottom: 8px;
+}
+
+.products-we-offer-subtitle {
+  font-size: 1.1rem;
+  color: #dadaef;
+  margin-bottom: 20px;
+}
+
+/* Cards Grid */
+.cards {
+  margin-top: 40px;
+  display: grid;
+  gap: 12px;
+  max-width: 1000px;
+}
+
+/* Card Styling */
+.card {
+  border: 2px solid transparent; /* Neutral border color */
+  border-radius: 12px; /* Increased border radius */
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 180px;
+  height: 70px;
+
+  /* Default Background Colors for Light and Dark Modes */
+  background-color: var(--card-bg);
+  color: var(--card-text);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.card h1 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .card {
+  background-color: #ebe2eb; /* Light mode background */
+  color: #000; /* Light mode text */
+  border: 2px solid #d3c3d3; /* Subtle border for light mode */
+  align-items: center;
+}
+
+body.light-mode .card:hover {
+  background-color: #d9cadd; /* Slightly darker shade for hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
+}
+
+body.dark-mode .card {
+  background-color: #0d0d0d; /* Dark mode background */
+  color: #fff; /* Dark mode text */
+  border: 2px solid #333; /* Subtle border for dark mode */
+}
+
+body.dark-mode .card:hover {
+  background-color: #222; /* Slightly lighter shade for hover */
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1); /* Glow effect for dark mode */
+}
+
+/* Explore Card Styling */
+.explore-card {
+  background-color: #e53946;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px; /* Same border radius as cards */
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  
+}
+
+.explore-card h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.explore-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-30deg);
+  transition: left 0.5s ease;
+}
+
+.explore-card:hover::before {
+  left: 100%;
+}
+
+.explore-card:hover {
+  background-color: #d32f2f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+
+/* Mobile Devices (max-width: 486px) */
+@media (max-width: 486px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 0 auto;
+    padding: 0 10px;
+   
+  }
+
+  .light-mode .products-we-offer-title{
+    color: #000;
+  }
+
+  .light-mode .products-we-offer-subtitle{
+    color:rgb(64, 62, 62);
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+    
+  }
+
+  .explore-card {
+    grid-column: span 2;
+    margin-top: -80px;
+    width: 170px;
+    height: 65px;
+    margin-left: 183px;
+  }
+}
+
+/* Tablet Devices (min-width: 487px and max-width: 1024px) */
+@media (min-width: 487px) and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    max-width: 220px;
+    height: 100px;
+  }
+
+  .explore-card {
+    grid-column: span 3;
+    margin-top: -115px;
+    width: 100%;
+    margin-left: 473px;
+  }
+}
+
+/* Desktop Devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 250px; /* Smaller cards on desktop */
+    height: 100px; /* Smaller height for desktop cards */
+  }
+
+  .explore-card {
+    grid-column: span 4;
+    margin-top: -120px;
+    width: 230px;
+    margin-left: 730px;
+  }
+
+  /* Dark Mode - Red Explore Card */
+  body.dark-mode .explore-card {
+    background-color: #e53946; /* Red color in dark mode */
+  }
+
+  body.light-mode .explore-card {
+    background-color: #7c76db; /* Red color in dark mode */
+  }
+  body.light-mode .explore-card:hover {
+    background-color: #5f56d2;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode .explore-card:hover {
+    background-color: #d82121;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}

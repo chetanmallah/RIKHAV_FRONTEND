@@ -1,0 +1,12 @@
+/* index.css or your main CSS file */
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  

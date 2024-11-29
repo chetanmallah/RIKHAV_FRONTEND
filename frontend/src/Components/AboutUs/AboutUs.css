@@ -1,0 +1,123 @@
+/* Styling for the About Us section */
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color:#1a1a1a; 
+    
+}
+
+.light-mode .about-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    background:#fff 
+    
+}
+
+.about-us-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-us-tagline {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.light-mode .about-us-tagline{
+    color: #ff1616;
+
+}
+
+.about-us-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #ebb672;
+}
+
+.light-mode .about-us-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #74716d;
+}
+
+.about-us-description {
+    font-size: 1.1rem;
+    color: #77b8f0;
+}
+
+.light-mode .about-us-description {
+    font-size: 1.1rem;
+    color: #143e64;
+}
+
+
+.about-content-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin-top: 1.5rem;
+}
+
+.about-card {
+     background: #0d0d0d; 
+    box-shadow: 0 4px 12px rgba(85, 83, 83, 0.981);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.light-mode .about-card {
+    background: #ebe2eb; 
+    box-shadow: 0 4px 12px rgba(85, 83, 83, 0.981);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #99b7e1;
+    margin-bottom: 1rem;
+}
+
+.light-mode .about-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c4c78;
+    margin-bottom: 1rem;
+}
+
+.about-card-content {
+    font-size: 1rem;
+    color: #a9a7a7;
+    line-height: 1.6;
+}
+
+
+.light-mode .about-card-content {
+    font-size: 1rem;
+    color: #746e6e;
+    line-height: 1.6;
+}

@@ -1,0 +1,300 @@
+/* General page container */
+.aboutus-section {
+  padding: 40px 10%;
+  font-family: Arial, sans-serif;
+  color: red;
+}
+
+.light-mode .aboutus-section {
+  padding: 40px 10%;
+  font-family: Arial, sans-serif;
+  color: rgb(20, 4, 4);
+}
+
+/* Container for the text and heading */
+.aboutus-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.aboutus-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.aboutus-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Flexbox container for image + text */
+.aboutus-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.aboutus-content.reverse {
+  flex-direction: row;
+}
+
+/* Centered text and card layout */
+.aboutus-text-container1 {
+  position: absolute;
+  top: 15%;
+  left: 52%;
+  transform: translateX(-20%);
+  z-index: 2;
+  width: 700px;
+}
+
+.aboutus-text-container2 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(10%);
+  z-index: 1;
+  width: 650px;
+  max-width: 100vw;
+  right: -50px;
+}
+
+.aboutus-mission {
+  background-color: orange;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(-70%);
+  height: 250px;
+}
+
+.aboutus-mission2 {
+  background-color: orange;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(-70%);
+  height: 245px;
+  margin-left: 330px;
+  width: 700px;
+}
+
+.aboutus-subtitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.aboutus-subtext {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Image styling */
+.aboutus-image {
+  flex: 1;
+  position: relative;
+}
+
+.aboutusimg1 {
+  width: 700px;
+  height: 370px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 520px;
+}
+
+.aboutusimg2 {
+  width: 700px;
+  height: 370px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(200, 26, 26, 0.1);
+  margin-right: 0;
+}
+
+/* For second section image on the left */
+.aboutus-content.reverse .aboutus-image {
+  order: 1;
+}
+
+.aboutus-content.reverse .aboutus-text-container {
+  left: 50%;
+  transform: translateX(-50%);
+  order: 2;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.why-choose-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f7f1f1;
+}
+
+.light-mode .why-choose-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #090101;
+}
+
+.why-choose-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.whychooseuscard {
+  background-color: #0d0d0d;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light-mode .whychooseuscard {
+  background-color: #ebe2eb;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whychooseuscard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: #ccc;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .aboutusimg1 {
+      width: 400px;
+      height: auto;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 100px;
+  }
+
+  .aboutusimg2 {
+    width: 400px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 90px;
+}
+
+  .aboutus-text-container1 {
+      width: 400px;
+      left: 365px;
+      transform: translateX(-50%);
+      margin-top: -60px;
+;
+  }
+
+  .aboutus-text-container2 {
+    width: 400px;
+    left: 10%;
+    transform: translateX(-50%);
+    margin-top: -60px;
+}
+
+  .aboutus-mission,
+  .aboutus-mission2 {
+      padding: 20px;
+      width: 90%;
+      transform: translateX(-50%);
+  }
+
+  .why-choose-card-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .whychooseuscard {
+      padding: 1.5rem;
+  }
+
+  .card-title {
+      font-size: 1rem;
+  }
+
+  .card-description {
+      font-size: 0.9rem;
+  }
+
+}
+
+/* Tablet and iPad responsive styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutusimg1
+ {
+      width: 80%;
+      height: auto;
+      margin-left: 220px;
+      
+  }
+
+  .aboutusimg2 {
+    width: 80%;
+      height: auto;
+      margin-left: -20px;
+      
+  }
+
+  .aboutus-text-container1{
+      width: 70%;
+      margin-left: 60px;
+  }
+  .aboutus-text-container2 {
+    width: 70%;
+   margin-left: -130px;
+}
+
+  .why-choose-card-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .whychooseuscard {
+      padding: 1.8rem;
+  }
+
+  .card-title {
+      font-size: 1.1rem;
+  }
+
+  .card-description {
+      font-size: 1rem;
+  }
+}

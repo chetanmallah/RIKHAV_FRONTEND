@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  /* Container */
+  .grievance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+  
+  /* Header Section */
+  .grievance-container h1 {
+    color: #da0c16;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .grievance-container h2 {
+    font-size: 2rem;
+    margin: 10px 0 30px;
+    color: #e9e0e0;
+    text-transform: capitalize;
+  }
+
+  .light-mode  .grievance-container h2 {
+    font-size: 2rem;
+    margin: 10px 0 30px;
+    color: #665555;
+    text-transform: capitalize;
+  }
+  
+  /* Grid Layout */
+  .grievance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .grievance-card {
+    background-color: #0d0d0d;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-left: 8px solid #0056b3;
+  }
+
+  .light-mode   .grievance-card {
+    background-color: #efefef;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-left: 8px solid #0056b3;
+    border-top: 1px solid #0d0d0d;
+    border-bottom: 1px solid #0d0d0d;
+  }
+  
+  /* Level Title */
+  .grievance-card h3 {
+    font-size: 1.2rem;
+    color: #6eaff4;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .light-mode   .grievance-card h3 {
+    font-size: 1.2rem;
+    color: #3294fd;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  /* Details */
+  .grievance-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #f7eded;
+    line-height: 1.5;
+  }
+
+  .light-mode   .grievance-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #594343;
+    line-height: 1.5;
+    
+  }
+  
+  /* Icons with Styling */
+  .grievance-card p .icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1rem;
+    color: #007bff;
+    vertical-align: middle;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grievance-grid {
+      grid-template-columns: 1fr;
+    }
+    .grievance-container {
+      padding: 20px 10px;
+    }
+  }
+  

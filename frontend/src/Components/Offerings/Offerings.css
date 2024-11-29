@@ -1,0 +1,238 @@
+/* Main container for the offerings section */
+.offerings-section {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  margin-top: 30px;
+}
+
+/* Main title styles */
+.main-title {
+  margin-left: 400px;
+  color: #ec0c0c;
+}
+
+/* Card grid layout */
+.offer-card-container {
+  width: 60%; /* Slimmer width for desktop */
+  margin-left: 250px;
+  margin-bottom: -700px;
+}
+
+.offer-card-component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two-column layout for desktop */
+  gap: 15px 10px; /* Reduced gap between cards */
+  padding: 10px;
+  margin-left: 20px;
+}
+
+/* Card styles */
+.offer-card {
+  padding: 4px;
+  border-radius: 8px;
+  border: 2px solid #d92f515d;
+  display: grid;
+  grid-template-columns: 55px auto;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0 2px 5px rgba(204, 27, 27, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  width: 350px;
+  position: relative;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(204, 27, 27, 0.5);
+  border: 1px solid red;
+}
+
+.offer-card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-description {
+  color: #aaa;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+.button-arrow {
+  background: red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+  position: absolute;
+  right: 8px;
+  top: 15px;
+}
+
+.button-arrow:hover {
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.button-arrow::after {
+  content: "→";
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Right image container */
+.offer-image-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #0d0d0d; */
+  margin-left: 870px;
+  margin-top: -80px;
+}
+
+.right-image {
+  width: 50%;
+  height: 400px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-top: 80px;
+  margin-left: -10px;
+}
+
+/* Dark mode styles */
+.dark-mode .main-title,
+.dark-mode .card-title {
+  color: #e8e2e2;
+}
+
+.dark-mode .offer-card {
+  background-color: #0d0d0d;
+}
+
+.dark-mode .offer-card:hover {
+  box-shadow: 0 4px 10px rgba(27, 204, 30, 0.5);
+  border: 1px solid rgba(142, 137, 240, 0.784);
+}
+
+/* Light mode styles */
+.light-mode .main-title,
+.light-mode .card-title {
+  color: #1d0303;
+}
+
+.light-mode .offer-card {
+  background-color: #ebe2eb;
+  box-shadow: 0 2px 5px rgb(185, 32, 32);
+  border: 2px solid #1e090f38;
+}
+
+.light-mode .offer-card:hover {
+  box-shadow: 0 4px 10px rgba(28, 37, 29, 0.5);
+  border: 2px solid rgba(37, 36, 54, 0.36);
+}
+
+/* Responsive styles */
+/* Tablet View - iPad Air and similar devices (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .offerings-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .offer-card-container {
+    width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  .offer-card-component {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .offer-card {
+    width: 100%;
+    height: 120px;
+  }
+  .offer-image-container{
+    display: none;
+  }
+}
+
+/* Mobile View - Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .offerings-section {
+    flex-direction: column;
+   
+    padding: 2px;
+  }
+
+  .offer-card-container {
+    width: 100%;
+    padding: 10px;
+   
+    margin-left: -10px;
+  }
+
+  .offer-card-component {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .offer-card {
+    width: 100%;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .offer-image-container{
+    display: none;
+  }
+  .light-mode .card-description{
+    color: #1c0c0c86;
+    font-family: sans-serif;
+    margin-left: -30px;
+  }
+
+  .dark-mode .card-description{
+    margin-left: -30px;
+  }
+
+  .light-mode .card-title{
+    color: #150101;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+  .dark-mode .card-title{
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,102 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #e60000; /* Red background for the hero section */
+}
+
+.banner img {
+  width: 100vw; /* Make image cover full width of the screen */
+  height: 100vh; /* Make image cover full height of the screen */
+  object-fit: cover; /* Ensure the image covers the area without stretching */
+  object-position: center; /* Center the image */
+  border-radius: 0; /* Remove border radius for a more seamless look */
+  margin: 0; /* Remove margins */
+  filter: brightness(100%); /* Set the brightness to normal */
+}
+
+
+.banner-text {
+  position: absolute;
+  color: #f5f5f5; /* Slightly whitish color for the text */
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 0 20px 140px;
+  max-width: 80%;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  margin-right: 150px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+.banner-text:hover {
+  color: #fff; /* Change to pure white on hover */
+  transform: scale(1.05); /* Zoom in hover */
+  text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .banner img {
+    margin-right: 0;
+    margin-top: 10px;
+    width: 90%; 
+  }
+  .banner-text {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto; 
+  }
+  .banner img {
+    width: 100%;
+    border-radius: 5px;
+    filter: brightness(50%); /* Enhance image for futuristic effect */
+  }
+  .banner-text {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: auto;
+    padding: 10px;
+  }
+  .banner img {
+    width: 100%;
+    border-radius: 5px;
+    filter: brightness(50%);
+  }
+  .banner-text {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner img {
+    width: 100%;
+  }
+}
