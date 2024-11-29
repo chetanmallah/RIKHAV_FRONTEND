@@ -1,20 +1,21 @@
 /* Footer styling */
 .footer {
-     background-color: #1a1a1a; 
+    background-color: #1a1a1a; 
+    color: #e0e0e0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    
+}
+
+.light-mode .footer {
+    background-color: #fff; 
     color: #e0e0e0;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
 }
 
-.light-mode .footer {
-    background-color: #fff; 
-   color: #e0e0e0;
-   padding: 40px 20px;
-   font-family: Arial, sans-serif;
-}
-
-.light-mode .footer-title{
-  color: #4c4040;
+.light-mode .footer-title {
+    color: #4c4040;
 }
 
 .footer-content {
@@ -37,7 +38,9 @@
     margin-bottom: 30px;
 }
 
-.footer-card {
+
+
+.dark-mode .footer-card {
     background-color: #0d0d0d; 
     padding: 20px;
     width: 45%;
@@ -45,16 +48,18 @@
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(165, 155, 144, 0.4);
     text-align: left;
+    margin: 10px 10;
 }
 
 .light-mode .footer-card {
     background-color: #ebe2eb; 
     padding: 20px;
-    width: 50%;
+    width: 45%;
     min-width: 280px;
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(165, 155, 144, 0.4);
     text-align: left;
+    
 }
 
 .footer-card h5 {
@@ -69,8 +74,6 @@
     margin-bottom: 10px;
 }
 
-
-
 .footer-card p {
     margin: 5px 0;
     font-size: 0.95em;
@@ -83,18 +86,22 @@
     color: #637ced;
 }
 
-
-
-.footer-info {
+.dark-mode .footer-info {
     text-align: center;
     font-size: 0.85em;
-    color: #a0a0a0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #cdc4c4;
+    border-top: 2px solid rgba(255, 255, 255, 0.45);
     padding-top: 20px;
 }
 
-.light-mode .footer-info{
-    color: #4c4040;
+.light-mode .footer-info {
+    
+        text-align: center;
+        font-size: 0.85em;
+        color: black;
+        border-top: 2px solid rgba(33, 3, 3, 0.6);
+        padding-top: 20px;
+    
 }
 
 .footer-info p {
@@ -102,23 +109,62 @@
 }
 
 /* Responsive adjustments */
+
+/* For Tablets and smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
     .footer-section {
         flex-direction: column;
     }
 
     .footer-card {
-        width: 100%;
+        width: 100%; /* Make cards full width */
+        margin: 5% 25%; /* Add margin to separate cards */
     }
 }
 
+/* For Mobile (max-width: 500px) */
 @media (max-width: 500px) {
- .footer-card{
-        margin-left: 45px;
-    } 
+    .footer-card {
+        width: 100%; /* Ensure full width */
+        margin-left: 12%;
+    }
 
-    .dark-mode .footer-card{
-        margin-left: 4px;
-    } 
+    .light-mode .footer-card {
+        margin-left: 0;
+    }
 }
 
+/* For larger desktop screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .footer-section {
+        flex-direction: row; /* Align cards side by side */
+        justify-content: space-between; /* Spread out the cards */
+    }
+
+    .footer-card {
+        width: 48%; /* Make cards slightly smaller for spacing */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .light-mode .footer-card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* For Extra Large screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+    .footer-section {
+        justify-content: space-between; /* Keep cards spaced out on large screens */
+    }
+
+    .footer-card {
+        width: 48%; /* Maintain card width for larger screens */
+    }
+
+    .light-mode .footer-card {
+        width: 48%; /* Light mode keeps the same card width */
+    }
+  
+}

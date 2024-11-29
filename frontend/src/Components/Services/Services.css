@@ -1,349 +1,364 @@
-
-.services-section {
+.ourservices-section {
   padding: 40px 30px;
   text-align: center;
-   background-color: #f8f8f8; 
+  background-color: #f8f8f8;
 }
 
-.dark-mode .services-section {
-  padding: 40px 30px;
-  text-align: center;
-  /* background-color: #0d0d0d;  */
+.dark-mode .ourservices-section {
   background-color: #1a1a1a;
 }
 
-
-.services-header {
+.ourservices-header {
   margin-bottom: 30px;
-
 }
 
-/* Title Styling */
-.services-title {
+.ourservices-title {
   font-size: 2rem;
   font-weight: 600;
   position: relative;
   display: inline-block;
   padding-bottom: 12px;
-  color: #ef5454; /* Default text color for light mode */
-  text-align: center; /* Centered the title */
-  width: 100%; /* Ensure full width for centering */
+  color: #ef5454;
+  text-align: center;
+  width: 100%;
 }
 
-.dark-mode .services-title {
-  font-size: 2rem;
-  font-weight: 600;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 12px;
-  color:  #ef5454;; /* Default text color for light mode */
-  text-align: center; /* Centered the title */
-  width: 100%; /* Ensure full width for centering */
+.dark-mode .ourservices-title {
+  color: #ef5454;
 }
 
-/* Smaller Underline Styling */
-.services-title::after {
+.ourservices-title::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 645px;
-  width: 12%; /* Smaller underline for the title */
-  height: 4px; /* Thinner line */
-  background-color: #e53946; /* Default color for light mode */
+  width: 12%;
+  height: 4px;
+  background-color: #e53946;
   border-radius: 50px;
 }
 
-/* Description Styling */
-.services-description p {
+.dark-mode .ourservices-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 645px;
+  width: 12%;
+  height: 4px;
+  background-color: #18e54f;
+  border-radius: 50px;
+}
+
+.ourservices-description p {
   font-size: 1rem;
   margin-top: 10px;
   line-height: 1.6;
-  color: #7a5b5b;; /* Default description color for light mode */
-  text-align: center; /* Centered description */
-}
-
-.dark-mode .services-description p {
-  font-size: 1rem;
-  margin-top: 10px;
-  line-height: 1.6;
-  color: #fffbfb;; /* Default description color for light mode */
-  text-align: center; /* Centered description */
-}
-
-/* Light Theme Styles */
-
-
-
-
-
-
-
-
-
-
-
-/* Welcome to Rikhav TC Section */
-.welcome-section {
-  padding: 40px 20px;
+  color: #7a5b5b;
   text-align: center;
-  background-color: #de0f0f; /* Default background */
-  margin-top: 20px;
 }
 
-.welcome-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #d42a2a; /* Default text color for light mode */
-  text-align: center; /* Centered the title */
+.dark-mode .ourservices-description p {
+  color: #fffbfb;
 }
 
-/* Light Theme Styles for Welcome Section */
-.welcome-section.light {
-  background-color: #fff;
-}
-
-
-
-
-
-
-
-/* Services Container */
-.services-container {
+.ourservices-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default for large screens (4 cards per row) */
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
-  
 }
 
-/* Light Theme Specific Styles for Card */
+.ourservices-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-
-.service-card.light:hover {
+.ourservices-card.light:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-
-
-/* Dark Theme Specific Styles for Card */
-.service-card.dark {
-  /* background-color: whitesmoke; */
+.dark-mode .ourservices-card {
   background-color: #0d0d0d;
   color: #f1f1f1;
   border: 1px solid #444;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
-.light-mode .service-card.dark {
-  /* background-color: whitesmoke; */
-  background-color: #ebe2eb;
-  color: #f1f1f1;
-  border: 1px solid #444;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-}
-
-
-
-
-.service-card.dark:hover {
+.ourservices-card.dark:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
 }
 
-/* Icons and Title */
-.service-icon {
+.ourservices-icon {
   font-size: 3rem;
   color: #e53946;
   margin-bottom: 15px;
 }
 
-.service-title {
+.ourservices-card-title {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
- 
 }
 
-.light-mode  .service-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
- color: #494646;
-}
-
-.service-line {
+.ourservices-card-line {
   width: 40px;
   height: 3px;
-  background-color: #e53946;
+  background-color: #18e54f;
   margin: 5px auto;
 }
 
-.service-description {
+.ourservices-card-description {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
-
 }
 
-.light-mode .service-description {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
- color: #1d1d1d;
-}
-/* Responsive Adjustments */
 
-/* Medium Screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 50px;
-  }
+/* Extra Small Screens (max-width: 480px) - Optimized for all mobile sizes */
 
-  .service-card {
-    padding: 15px;
-  }
-}
-
-/* Small Screens (max-width: 768px) */
-@media (max-width: 768px) {
-  .services-section {
-    padding: 25px 20px;
-  }
-
-  .services-title {
-    font-size: 1.8rem;
-  }
-
-  .services-description p {
-    font-size: 1rem;
-  
-  }
-
-  .service-card {
-    height: 300px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-  }
-
-  .service-icon {
-    font-size: 2.5rem;
-  }
-
-  .service-title {
-    font-size: 1.3rem;
-  }
-
-  .service-line {
-    width: 30px;
-  }
-
-  .services-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-}
-
-/* Extra Small Screens (max-width: 480px) */
 @media (max-width: 480px) {
-  .services-section {
-    padding: 20px 15px;
+  /* Section Styling */
+  .ourservices-section {
+    padding: 20px 10px;
   }
 
-  .light-mode .services-p{
-    font-family: 'Times New Roman', Times, serif;
-   
-    color: #0d0d0d;
+  .ourservices-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .ourservices-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
   }
 
-  .services-container {
-    grid-template-columns: 1fr;
+  .dark-mode .ourservices-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Centered line width */
+    height: 5px;
+    background-color: #18e54f; /* Red line */
+    margin: 8px auto 0; /* Center alignment */
+    left: 150px;
+  }
+ 
+  .light-mode .ourservices-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Centered line width */
+    height: 5px;
+    background-color: #e53946; /* Red line */
+    margin: 8px auto 0; /* Center alignment */
+    left: 150px;
+  }
+
+  
+  /* Services Container */
+  .ourservices-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
     gap: 15px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center; /* Center align */
+    width: 100%;
   }
 
-  .service-card {
-    width: 300px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px 40px;
-    height: 100%;
+  /* Individual Card Styling */
+  .ourservices-card {
+    width: 90%; /* Fit within the screen */
+    max-width: 300px; /* Ensure it doesn't grow too wide */
+    aspect-ratio: 1; /* Ensure square cards */
+    padding: 15px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -10px;
+    background-color: #fff; /* Light mode */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.361); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+    
   }
 
-  .service-icon {
-    font-size: 2rem;
+  .dark-mode .ourservices-card {
+    background-color: #1a1a1a; /* Dark mode background */
+    border: 1px solid #444;
+    box-shadow: 0 4px 12px rgba(146, 143, 143, 0.3); /* Dark mode shadow */
+    color: #f1f1f1; /* Light text */
+   
   }
 
-  .service-title {
-    font-size: 1.2rem;
+  .ourservices-icon {
+    font-size: 2rem; /* Adjust icon size */
+    color: #e53946;
+    margin-bottom: 8px;
   }
 
-  .service-line {
-    width: 25px;
-    height: 2px;
+  .ourservices-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: inherit; /* Matches light or dark mode */
   }
 
-  .service-description {
+  .light-mode .ourservices-card-line {
+    width: 40px;
+    height: 3px;
+    background-color: #e53946; /* Red line */
+    margin: 5px 0;
+  }
+
+  .dark-mode .ourservices-card-line {
+    width: 40px;
+    height: 3px;
+    background-color:  #18e54f; /* Red line */
+    margin: 5px 0;
+  }
+
+
+  .ourservices-card-description {
     font-size: 0.9rem;
-    color: #ccc;
+    text-align: center;
+    line-height: 1.4;
+    color: #777; /* Light mode text */
+  }
+
+  /* Dark Mode Text Adjustments */
+  .dark .ourservices-card-description {
+    color: #ccc; /* Lighter text for dark mode */
+  }
+}
+
+/* Media query for iPad screens (1024px to 800px) */
+@media (min-width: 760px) and (max-width: 1024px) {
+  .dark-mode .ourservices-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Centered line width */
+    height: 5px;
+    background-color: #18e54f;/* Red line */
+    margin: 8px auto 0; /* Center alignment */
+    left: 45%;
+  }
+ 
+  .light-mode .ourservices-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Centered line width */
+    height: 5px;
+    background-color: #e53946; /* Red line */
+    margin: 8px auto 0; /* Center alignment */
+    left: 45%;
+  }
+}
+
+/* Media query for Medium Tablets (600px to 800px) */
+
+
+/* Media query for iPad Mini and similar tablet devices (800px to 1024px) */
+@media (min-width: 760px) and (max-width: 1024px) {
+  /* Section padding adjustments */
+  .ourservices-section {
+    padding: 30px 20px; /* Reduced padding for better tablet layout */
+  }
+
+  /* Centering the container and adjusting the wrapping of cards */
+  .ourservices-container {
+    display: flex;
+    justify-content: center; /* Center the container */
+    flex-wrap: wrap; /* Allow wrapping for small screen sizes */
+    gap: 20px;
+    padding-top: 20px; /* Add space at the top */
+  }
+
+  /* Ensuring that all cards are square (same width and height) */
+  .ourservice-card {
+    width: 250px; /* Fixed width for square card */
+    height: 250px; /* Fixed height to make the card square */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better look */
+    background-color: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Icon size adjustments */
+  .ourservice-icon {
+    font-size: 2.5rem; /* Slightly larger icons for better visibility */
+    margin-bottom: 15px;
+    color: #e53946;
+  }
+
+  /* Title styling adjustments for iPad Mini */
+  .ourservice-title {
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #494646;
+  }
+
+  /* Line styling under the title */
+  .light-mode .ourservice-line {
+    width: 50px; /* Adjusted line width */
+    height: 3px;
+    background-color: #e53946;
+    margin: 5px 0;
+
+  }
+
+
+  /* Description text adjustments */
+  .ourservice-description {
+    font-size: 1rem; /* Adjusted font size for readability */
     line-height: 1.4;
     text-align: center;
+    color: #7a5b5b;
   }
 
-  .services-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 135px;
-    width: 30%; /* Smaller underline for the title */
-    height: 4px; /* Thinner line */
-    background-color: #e53946; /* Default color for light mode */
-    border-radius: 20px;
+  /* Dark Mode styling for iPad Mini */
+  .dark-mode .ourservice-card {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    border: 1px solid #444;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .dark-mode .ourservice-icon {
+    color: #f1f1f1;
+  }
+
+  .dark-mode .ourservice-title {
+    color: #f1f1f1;
+  }
+
+  .dark-mode .ourservice-line {
+    background-color: #f1f1f1;
+  }
+
+  .dark-mode .ourservice-description {
+    color: #ccc;
   }
 }
 
-/* Global Styles for Accessibility and Universal Appeal */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h2 {
-  font-family: 'Arial', sans-serif;
-}
+/* Media query for iPad Pro (1024px to 1333px) */

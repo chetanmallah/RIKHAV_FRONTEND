@@ -92,7 +92,7 @@ body.dark-mode .card:hover {
 
 /* Explore Card Styling */
 .explore-card {
-  background-color: #e53946;
+  background-color: #e53946; /* Initial red color */
   color: #fff;
   font-weight: bold;
   display: flex;
@@ -105,7 +105,6 @@ body.dark-mode .card:hover {
   position: relative;
   overflow: hidden;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  
 }
 
 .explore-card h1 {
@@ -130,9 +129,24 @@ body.dark-mode .card:hover {
 }
 
 .explore-card:hover {
-  background-color: #d32f2f;
   transform: translateY(-3px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .explore-card {
+  background-color: #4e8df2; /* Blue in light mode */
+}
+
+body.light-mode .explore-card:hover {
+  background-color: #35a05e; /* Green on hover in light mode */
+}
+
+body.dark-mode .explore-card {
+  background-color: #d32f2f; /* Red in dark mode */
+}
+
+body.dark-mode .explore-card:hover {
+  background-color: #d82121; /* Darker red on hover in dark mode */
 }
 
 /* Responsive Styles */
@@ -144,21 +158,27 @@ body.dark-mode .card:hover {
     gap: 12px;
     margin: 0 auto;
     padding: 0 10px;
-   
   }
 
-  .light-mode .products-we-offer-title{
+  .light-mode .products-we-offer-title {
     color: #000;
   }
 
-  .light-mode .products-we-offer-subtitle{
-    color:rgb(64, 62, 62);
+  .dark-mode .products-we-offer-title {
+    color: #db1a1a;
+  }
+
+  .light-mode .products-we-offer-subtitle {
+    color: rgb(64, 62, 62);
+  }
+
+  .dark-mode .products-we-offer-subtitle {
+    color: rgb(223, 219, 219);
   }
 
   .card {
     max-width: 100%;
     height: auto;
-    
   }
 
   .explore-card {
@@ -175,11 +195,21 @@ body.dark-mode .card:hover {
   .cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    
+    margin-top: 10px;
   }
 
   .card {
     max-width: 220px;
     height: 100px;
+  }
+  
+  .light-mode .products-we-offer-subtitle{
+    color: black;
+  }
+
+  .dark-mode .products-we-offer-subtitle{
+    color: #d9cadd;
   }
 
   .explore-card {
@@ -198,7 +228,7 @@ body.dark-mode .card:hover {
   }
 
   .card {
-    max-width: 250px; /* Smaller cards on desktop */
+    max-width: 220px; /* Smaller cards on desktop */
     height: 100px; /* Smaller height for desktop cards */
   }
 
@@ -215,15 +245,17 @@ body.dark-mode .card:hover {
   }
 
   body.light-mode .explore-card {
-    background-color: #7c76db; /* Red color in dark mode */
+    background-color: #4e8df2; /* Blue color in light mode */
   }
+
   body.light-mode .explore-card:hover {
-    background-color: #5f56d2;
+    background-color: #35a05e; /* Green hover effect in light mode */
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
+
   body.dark-mode .explore-card:hover {
-    background-color: #d82121;
+    background-color: #d82121; /* Dark red hover effect in dark mode */
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }

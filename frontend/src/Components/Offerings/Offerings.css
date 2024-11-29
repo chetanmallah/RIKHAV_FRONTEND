@@ -2,47 +2,69 @@
 .offerings-section {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  justify-content: flex-start; /* Align cards to the left on desktop */
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 30px;
+  /* background-color: #ee84ee; */
 }
 
 /* Main title styles */
 .main-title {
-  margin-left: 400px;
+  margin-left: 0; /* Move the title to the left */
   color: #ec0c0c;
+  text-align: left; /* Align title to the left */
+  font-family: 'Arial', sans-serif; /* Changed font family */
 }
 
 /* Card grid layout */
 .offer-card-container {
   width: 60%; /* Slimmer width for desktop */
-  margin-left: 250px;
-  margin-bottom: -700px;
+  margin-left: 0; /* Align cards to the left */
+  margin-bottom: 0; /* Remove the bottom margin */
 }
 
 .offer-card-component {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two-column layout for desktop */
+  gap: 15px 15px; /* Reduced gap between cards */
+  padding: 10px;
+  margin-left: 0;
+  text-align: left; /* Align text to the left inside cards */
+  /* background-color: #000; */
+}
+
+
+
+
+
+.dark-mode.offer-card-component {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two-column layout for desktop */
   gap: 15px 10px; /* Reduced gap between cards */
   padding: 10px;
-  margin-left: 20px;
+  
+  text-align: left; /* Align text to the left inside cards */
+ background-color: #ebe2eb;
 }
+
 
 /* Card styles */
 .offer-card {
-  padding: 4px;
+  padding: 16px;
+  
   border-radius: 8px;
   border: 2px solid #d92f515d;
   display: grid;
   grid-template-columns: 55px auto;
   align-items: center;
-  height: 100px;
+  height: 120px; /* Adjusted height */
   box-shadow: 0 2px 5px rgba(204, 27, 27, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
-  width: 350px;
+  width: 100%; /* Make cards fill the container */
   position: relative;
+  font-family: 'Arial', sans-serif; /* Changed font family */
 }
 
 .offer-card:hover {
@@ -67,12 +89,13 @@
   padding-top: 5px;
 }
 
-.card-title {
-  color: #fff;
+.offer-card-title {
+  color: #fff; /* Default white text for title */
   font-size: 0.9rem;
   font-weight: bold;
   margin: 0;
 }
+
 
 .card-description {
   color: #aaa;
@@ -80,6 +103,7 @@
   margin-top: 2px;
 }
 
+/* Button arrow */
 .button-arrow {
   background: red;
   border-radius: 50%;
@@ -110,9 +134,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: #0d0d0d; */
-  margin-left: 870px;
-  margin-top: -80px;
+  margin-left: 800px; /* Move the image to the right */
+ 
+  margin-top: -500px;
 }
 
 .right-image {
@@ -121,17 +145,25 @@
   border-radius: 10%;
   object-fit: cover;
   margin-top: 80px;
-  margin-left: -10px;
 }
 
 /* Dark mode styles */
 .dark-mode .main-title,
-.dark-mode .card-title {
-  color: #e8e2e2;
+.dark-mode .offer-card-title {
+  color: #fff; /* White text for titles in dark mode */
 }
 
 .dark-mode .offer-card {
-  background-color: #0d0d0d;
+  background-color: #0d0d0d; /* Dark background for the card */
+  color: #fff; /* White text for card content */
+}
+
+.dark-mode .offer-card-title {
+  color: white; /* Title in white */
+}
+
+.dark-mode .offer-card-description {
+  color: #aaa; /* Lighter description in dark mode */
 }
 
 .dark-mode .offer-card:hover {
@@ -141,7 +173,7 @@
 
 /* Light mode styles */
 .light-mode .main-title,
-.light-mode .card-title {
+.light-mode .offer-card-title {
   color: #1d0303;
 }
 
@@ -156,6 +188,15 @@
   border: 2px solid rgba(37, 36, 54, 0.36);
 }
 
+.light-mode .offer-card-title {
+  color: #000; /* Black text for light mode titles */
+}
+
+.light-mode .card-description {
+  color: #1c0c0c86;
+  font-family: sans-serif;
+}
+
 /* Responsive styles */
 /* Tablet View - iPad Air and similar devices (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -163,6 +204,16 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+  }
+
+  .dark-mode .offer-card-image{
+    
+    border:4px solid #ec0c0c;
+  }
+
+  .light-mode .offer-card-image{
+    
+    border:4px solid #ec0c0c;
   }
 
   .offer-card-container {
@@ -179,9 +230,48 @@
   .offer-card {
     width: 100%;
     height: 120px;
+    top: 40%;
   }
   .offer-image-container{
     display: none;
+  }
+  .light-mode .main-title{
+    color: #1a1a1a;
+    margin-left: 40%;
+  }
+
+  .dark-mode .main-title{
+    color: red;
+    margin-left: 40%;
+  }
+
+
+  .light-mode .card-description {
+    color: #0b0202da;
+    font-family: sans-serif;
+  align-self: flex-start;
+  }
+
+  .dark-mode .card-description {
+    
+    color:  whitesmoke;
+    align-self: flex-start;
+  }
+  .dark-mode .offer-card-title{
+    color: #ebe2eb;
+    align-self: self-start;
+     font-size: large;
+  }
+
+  .light-mode .offer-card-title{
+    color: #1f1e1f;
+    align-self: self-start;
+     /* font-size: large; */
+    }
+
+  .offer-card-title{
+    margin-top: -5%;
+    
   }
 }
 
@@ -189,14 +279,12 @@
 @media (max-width: 480px) {
   .offerings-section {
     flex-direction: column;
-   
     padding: 2px;
   }
 
   .offer-card-container {
     width: 100%;
     padding: 10px;
-   
     margin-left: -10px;
   }
 
@@ -214,25 +302,93 @@
     text-align: center;
     margin: 10px 0;
   }
-  .offer-image-container{
+  .offer-image-container {
     display: none;
   }
-  .light-mode .card-description{
-    color: #1c0c0c86;
+
+  .light-mode .card-description {
+    color: #0b0202da;
     font-family: sans-serif;
-    margin-left: -30px;
+  align-self: flex-start;
+  }
+
+  .dark-mode .card-description {
+    
+    color:  whitesmoke;
+    align-self: flex-start;
+  }
+
+  .light-mode .offer-card-title {
+    color: #150101;
+    align-self: flex-start;
+   font-size: large;
+   margin-top: -10px;
+  }
+  .dark-mode .offer-card-title {
+    align-self: flex-start;
+    color: #ee84ee;
+    font-size: large;
+    margin-top: -10px;
+  }
+
+  .light-mode .offer-card-image{
+    
+    border:3px solid #ec0c0c;
+  }
+}
+
+@media (min-width: 1030px) {
+
+  .dark-mode .offer-card-title{
+    color: #ebe2eb;
+    align-self: self-start;
   }
 
   .dark-mode .card-description{
-    margin-left: -30px;
+    color: #ee84ee;
+    align-self: flex-start;
   }
+ .light-mode .offer-card-component{
+  
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: -70px;
+  
+ }
 
-  .light-mode .card-title{
-    color: #150101;
-    font-weight: 700;
-    margin-left: 10px;
-  }
-  .dark-mode .card-title{
-    margin-left: 10px;
-  }
+.light-mode .main-title{
+ margin-left: 70%;
+  color: red;
+}
+
+.dark-mode .offer-card-component{
+  
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: -70px;
+  
+ }
+
+.dark-mode .main-title{
+ margin-left: 70%;
+  color: red;
+}
+
+ .right-image{
+   width: 100%;
+   height: 100%;
+   margin-left: 10px;
+   margin-top: 20px;
+ }
+
+ .light-mode .offer-card-image{
+    
+  border:4px solid #ec0c0c;
+}
+ 
+.dark-mode .offer-card-image{
+    
+  border:4px solid #ec0c0c;
+}
+
 }

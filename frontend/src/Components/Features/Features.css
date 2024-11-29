@@ -89,13 +89,13 @@
 .feature-card-title {
     font-size: 1rem;
     font-weight: bold;
-    color: #e9ce84;
+    color: #f3f30d;
     margin: 0.5rem 0;
 }
 
 .feature-card-description {
     font-size: 0.85rem;
-    color: #b4dc79;
+    color: #e8e5df;
 }
 
 /* Light Mode Overrides */
@@ -104,11 +104,13 @@
 }
 
 .light-mode .feature-card-title {
-    color: #1f0707;
+    color: #ee1010;
+    
 }
 
 .light-mode .feature-card-description {
-    color: #1a1818;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
 }
 
 /* Responsive Styles */
@@ -123,7 +125,7 @@
     }
 
     .feature-card-section{
-        margin-top: 700px;
+        margin-top: 10%;
     }
 
     .feature-card {

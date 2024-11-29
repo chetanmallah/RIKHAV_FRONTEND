@@ -26,8 +26,7 @@ const Footer = () => {
                         <p><strong>Branch:</strong> Fort</p>
                     </div>
                 </div>
-                
-                <div className="footer-info">
+                            <div className="footer-info">
                     <p>Rikhav Securities Ltd - Member: BSE/ NSE / MCX. SEBI Registration No.: INZ000157737.</p>
                     <p>Compliance Officer: Mr. Vishal G. Patel | Contact Email: info@rikhav.net</p>
                     <p>Depository Participant (CDSL) SEBI Registration No.: IN-DP-CDSL-417-2007. DP Compliance Officer: Vishal G. Patel</p>

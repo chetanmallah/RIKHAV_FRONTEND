@@ -11,7 +11,7 @@ import rightImage from '../../assets/red_girl_model.png'; // Use a transparent P
 import { useTheme } from '../../context/ThemeContext'; // Import the theme hook
 
 const offerCards = [
-  { id: 0, image: offer1, title: "Futures and Options", description: "Empowering you with the latest options." },
+  { id: 0, image: offer1, title: "Futures and Options", description: "Empowering you with theoptions." },
   { id: 2, image: offer2, title: "Margin Trading Facility", description: "Empowering you with flexible trading." },
   { id: 3, image: offer3, title: "Currency", description: "Trade in various global currencies." },
   { id: 4, image: offer4, title: "Commodity", description: "Invest in commodities like gold, silver." },
@@ -24,9 +24,9 @@ const Offerings = () => {
 
   const arrayDataItems = offerCards.map((offercard) => (
     <div key={offercard.id} className={`offer-card  ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-      <img src={offercard.image} alt={offercard.title} />
+      <img className='offer-card-image' src={offercard.image} alt={offercard.title} />
       <div className="card-content">
-        <h1 className={`card-title  ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>{offercard.title}</h1>
+        <h1 className={`offer-card-title  ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>{offercard.title}</h1>
         <p className="card-description">{offercard.description}</p>
         <div className="button-arrow"></div>
       </div>

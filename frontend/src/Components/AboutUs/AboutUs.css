@@ -4,8 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem 2rem;
-    background-color:#1a1a1a; 
-    
+    background-color: #1a1a1a;
 }
 
 .light-mode .about-us-section {
@@ -13,8 +12,7 @@
     flex-direction: column;
     align-items: center;
     padding: 3rem 2rem;
-    background:#fff 
-    
+    background: #fff;
 }
 
 .about-us-header {
@@ -30,9 +28,8 @@
     margin: 0;
 }
 
-.light-mode .about-us-tagline{
+.light-mode .about-us-tagline {
     color: #ff1616;
-
 }
 
 .about-us-title {
@@ -59,7 +56,6 @@
     color: #143e64;
 }
 
-
 .about-content-container {
     display: flex;
     gap: 1.5rem;
@@ -70,7 +66,7 @@
 }
 
 .about-card {
-     background: #0d0d0d; 
+    background: #0d0d0d;
     box-shadow: 0 4px 12px rgba(85, 83, 83, 0.981);
     border-radius: 8px;
     padding: 2rem;
@@ -83,7 +79,7 @@
 }
 
 .light-mode .about-card {
-    background: #ebe2eb; 
+    background: #ebe2eb;
     box-shadow: 0 4px 12px rgba(85, 83, 83, 0.981);
     border-radius: 8px;
     padding: 2rem;
@@ -95,10 +91,22 @@
     text-align: center;
 }
 
-.about-card-title {
+.dark-mode .about-card {
+    background:#1a1a1a;
+    box-shadow: 0 4px 12px rgba(85, 83, 83, 0.981);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.dark-mode .about-card-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #99b7e1;
+    color: #e1ca99;
     margin-bottom: 1rem;
 }
 
@@ -109,15 +117,232 @@
     margin-bottom: 1rem;
 }
 
-.about-card-content {
-    font-size: 1rem;
-    color: #a9a7a7;
+.dark-mode .about-card-content {
+    font-size: 140%;
+    color: #dbd3d3;
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.light-mode .about-card-content {
+    font-size: 140%;
+    color: #746e6e;
     line-height: 1.6;
 }
 
+/* Responsive Styles */
 
-.light-mode .about-card-content {
-    font-size: 1rem;
-    color: #746e6e;
-    line-height: 1.6;
+/* For iPad Mini / smaller tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .about-us-section {
+        padding: 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2rem;
+    }
+
+    .about-us-description {
+        font-size: 1rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+        max-width: 320px;
+        margin-bottom: 1rem;
+    }
+
+    .about-card-title {
+        font-size: 1.4rem;
+    }
+
+    .about-card-content {
+        font-size: 120%;
+    }
+}
+
+/* For iPad Pro (1024px) and larger tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-us-section {
+        padding: 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2.3rem;
+    }
+
+    .about-us-description {
+        font-size: 1.1rem;
+    }
+
+    .about-content-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about-card {
+        padding: 1.8rem;
+        max-width: 350px;
+    }
+
+    .about-card-title {
+        font-size: 1.5rem;
+    }
+
+    .about-card-content {
+        font-size: 130%;
+    }
+}
+
+/* For Desktop */
+@media (min-width: 1025px) {
+    .about-us-section {
+        padding: 3rem 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2.5rem;
+    }
+
+    .about-us-description {
+        font-size: 1.2rem;
+    }
+
+    .about-content-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .about-card {
+        padding: 2rem;
+        max-width: 400px;
+    }
+
+    .about-card-title {
+        font-size: 1.5rem;
+    }
+
+    .about-card-content {
+        font-size: 140%;
+    }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-us-section {
+        padding: 1.5rem;
+    }
+
+    .about-us-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-us-description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-content-container {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .about-card {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-card-title {
+        font-size: 1.3rem;
+    }
+
+    .about-card-content {
+        font-size: 110%;
+    }
+
+    .about-us-tagline {
+        font-size: 0.9rem;
+    }
+}
+
+/* For Desktop (min-width: 1025px) */
+/* For Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .about-us-section {
+        padding: 3rem 2rem;
+    }
+
+    .about-us-title {
+        font-size: 2.5rem;
+    }
+
+    .about-us-description {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust layout of the container to create gap between cards */
+    .about-content-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 2rem; /* Added more space between cards */
+        justify-items: center;
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+
+    .about-card {
+        padding: 1.5rem; /* Reduced padding for compactness */
+        width: 100%; /* Full width of the grid column */
+        max-width: 350px; /* Set width to be more spacious */
+        height: auto; /* Allow the card to have natural height */
+        background: #0d0d0d; /* Dark background */
+        box-shadow: 0 4px 12px rgba(85, 83, 83, 0.5); /* Softer shadow */
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        text-align: center;
+        border: 1px solid #ccc; /* Border to define the card */
+        margin-left: 100%;
+    }
+
+    .light-mode .about-card {
+        background: #ebe2eb; /* Light mode card background */
+        border: 1px solid #d1c9d1; /* Lighter border in light mode */
+    }
+
+    .dark-mode .about-card{
+        background: #1a1a1a;
+        border: 1px solid #d1c9d1;
+    }
+
+    .about-card-title {
+        font-size: 1.3rem; /* Slightly smaller title */
+        font-weight: bold;
+        color: #e1ca99;
+        margin-bottom: 1rem;
+    }
+
+    .light-mode .about-card-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2c4c78;
+        margin-bottom: 1rem;
+    }
+
+    .about-card-content {
+        font-size: 1.2rem; /* Smaller font size for content */
+        color: #dbd3d3;
+        line-height: 1.6;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .light-mode .about-card-content {
+        font-size: 1.2rem;
+        color: #746e6e;
+        line-height: 1.6;
+    }
 }
