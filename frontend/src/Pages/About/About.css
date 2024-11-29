@@ -208,8 +208,12 @@
       margin-top: 100px;
   }
 
-  .aboutus-title{
-   margin-top: 15%;
+  .light-mode .aboutus-title{
+    margin-top:50px;
+  }
+
+    .dark-mode .aboutus-title{
+    margin-top:50px;
   }
 
   .aboutusimg2 {
@@ -267,14 +271,14 @@
       width: 80%;
       height: auto;
       margin-left: 220px;
-      
+
   }
 
   .aboutusimg2 {
     width: 80%;
       height: auto;
       margin-left: -20px;
-      
+
   }
 
   .aboutus-text-container1{
